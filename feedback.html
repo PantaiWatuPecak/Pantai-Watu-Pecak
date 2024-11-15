@@ -1,0 +1,237 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="feedback-container">
+        <h2>Feedback untuk Pantai Watu Pecak</h2>
+        <p>Kami ingin mendengar pengalaman Anda di Pantai Watu Pecak!</p>
+        <form id="feedbackForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email Anda" required>
+
+            <label for="message">Pesan & Saran:</label>
+            <textarea id="message" name="message" placeholder="Bagikan pengalaman Anda..." required></textarea>
+            <label for="rating">Penilaian:</label>
+            <div class="star-rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <input type="hidden" id="rating" name="rating" value="">
+
+            <button type="submit">Kirim Feedback</button>
+            <p id="formMessage"></p>
+        </form>
+    </div>
+
+    <!-- Div untuk menampilkan hasil feedback -->
+    <div id="feedbackResults" class="feedback-results"></div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<style class="css">
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #87CEEB, #f0e68c); /* Gradasi langit biru dan pasir */
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.feedback-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    /* Menyelaraskan secara vertikal dan horizontal */
+    position: relative;
+    z-index: 1;
+}
+
+.feedback-container h2 {
+    color: #00796b; /* Warna hijau kebiruan */
+    margin-bottom: 10px;
+}
+
+.feedback-container p {
+    color: #ffab40; /* Warna oranye */
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+form label {
+    display: block;
+    color: #00796b;
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.star {
+    font-size: 2rem;
+    color: #cccccc; /* Warna bintang default */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star:hover, .star.selected {
+    color: #ffab40; /* Warna bintang saat dipilih */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #4db6ac;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #ffab40;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff6f00; /* Oranye lebih gelap */
+}
+
+#formMessage {
+    color: #00796b;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.feedback-results {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-item {
+    border-bottom: 1px solid #cccccc;
+    padding: 15px 0;
+}
+
+.feedback-item:last-child {
+    border-bottom: none;
+}
+
+.feedback-item h3 {
+    font-size: 1.2rem;
+    color: #00796b;
+}
+
+.feedback-item p {
+    color: #333;
+    margin: 5px 0;
+}
+
+.feedback-item .rating {
+    color: #ffab40;
+}
+
+/* Responsif - Mobile dan Tablet */
+@media (max-width: 768px) {
+    .feedback-container {
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .star-rating {
+        flex-direction: column;
+    }
+
+    .star {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    .feedback-item h3 {
+        font-size: 1rem;
+    }
+
+    .feedback-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedback-container {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .star-rating {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .star {
+        font-size: 1.2rem;
+    }
+
+    .feedback-item h3 {
+        font-size: 0.9rem;
+    }
+
+    .feedback-item p {
+        font-size: 0.8rem;
+    }
+}
+
+</style>
