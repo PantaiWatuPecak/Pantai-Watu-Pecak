@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantai Watu Pecak - Lumajang</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="overlay"></div>
+    <img src="c:\Users\upgra\OneDrive\Pictures\FOTO PANTAI WATU PECAK\WhatsApp Image 2024-11-12 at 10.43.25_16aa249b.jpg" alt="Pantai Watu Pecak" class="header-image">
+    <h1>
+        <div class="overlay"></div>
+        <h1>
+            <i class="fas fa-sun"></i> Pantai Watu Pecak <i class="fas fa-water"></i>
+        </h1>
+        <p>
+            <i class="fas fa-leaf"></i> Selamat datang di Pantai Watu Pecak, Lumajang. Temukan keindahan dan aktivitas menarik di pantai ini.
+        </p>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="facilities">
+        <div class="facility">
+            <img src="https://imageurl.com/parking.png" alt="Parking Area">
+            <h2>Area Parkir</h2>
+            <p>Tersedia area parkir luas untuk mobil dan motor, menjamin kenyamanan akses bagi pengunjung.</p>
+        </div>
+        
+        <div class="facility">
+            <img src="c:\Users\upgra\Downloads\20241201_130732.jpg" alt="Toilets">
+            <h2>Toilet Umum</h2>
+            <p>Fasilitas toilet yang bersih dan mudah dijangkau di berbagai titik sekitar pantai.</p>
+        </div>
+        
+        <div class="facility">
+            <img src="https://imageurl.com/gazebo.png" alt="Gazebos">
+            <h2>Gazebo</h2>
+            <p>Gazebo-gazebo nyaman yang dapat Anda gunakan untuk bersantai menikmati pemandangan pantai.</p>
+        </div>
+
+        <div class="facility">
+            <img src="c:\Users\upgra\Downloads\20241201_133520.jpg" alt="Musholla">
+            <h2>Musholla</h2>
+            <p>Tempat ibadah yang nyaman dan bersih bagi pengunjung yang ingin beribadah.</p>
+        </div>
+
+        <div class="facility">
+            <img src="c:\Users\upgra\Downloads\20241201_133301.jpg" alt="Food Stall">
+            <h2>Warung Kuliner</h2>
+            <p>Berbagai pilihan kuliner khas pantai yang bisa dinikmati di sepanjang pantai.</p>
+        </div>
+    </section>
+
+</body>
+</html>
+
+<style class="css">
+/* Reset */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #87CEEB, #f0e68c); /* Gradasi langit biru dan pasir */
+    background-size: cover;
+    background-attachment: fixed;
+    color: brown;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    color: brown;
+    text-align: center;
+    padding: 80px 20px;
+    overflow: hidden;
+    height: 400px;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: brown; 
+    z-index: 1;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: cadetblue;
+    z-index: 1;
+}
+
+/* Facilities Section */
+.facilities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(212, 171, 171, 0.9);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.facility {
+    text-align: center;
+    width: 250px;
+    padding: 45px;
+    background: oldlace;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.facility img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.facility h2 {
+    font-size: 1.5em;
+    color: #323938;
+}
+
+.facility p {
+    color: #567d5f;
+}
+
+.facility:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .facilities {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+</style>
