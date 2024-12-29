@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantai Watu Pecak - Surga Wisata di Lumajang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <header>
+    <!-- Tombol Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Navigasi -->
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="index.html">Tentang</a></li>
+            <li><a href="location.html">Lokasi</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="facilities.html">Fasilitas dan Aksesbilitas</a></li>
+        </ul>
+    </nav> 
+        <script src="script.js"> </script>
+        <div class="overlay"></div>
+        <img src="images/WhatsApp Image 2024-12-17 at 08.50.34_96107325.jpg" alt="Pantai Watu Pecak" class="header-image">
+        <h1>
+            <div class="overlay"></div>
+            <h1>
+                <i class="fas fa-sun"></i> Pantai Watu Pecak <i class="fas fa-water"></i>
+            </h1>
+            <p>
+                <i class="fas fa-leaf"></i> Selamat datang di Pantai Watu Pecak, Lumajang. Temukan keindahan dan aktivitas menarik di pantai ini.
+            </p> 
+ </header>
+
+
+    <section id="about">
+        <h2>Tentang Pantai Watu Pecak</h2>
+        <p>Pantai Watu Pecak adalah destinasi alam yang terkenal ombak yang indah. Pemandangan pantai yang bernuansa pasir hitam memberikan daya tarik menikmati sunrise, sunset dan berkuda dengan memanfaatkan spot foto yang tersedia serta menikmati kuliner khas Pantai Watu Pecak.</p>
+    </section>
+
+    <section id="Jam Operasional">
+        <h2>Jam Operasional Pantai Watu Pecak</h2>
+        <p>Pantai Watu Pecak buka setiap hari pukul 07.00 WIB - 18.00 WIB dengan sekali bayar Rp 10.000 (biaya parkir motor dan tiket masuk) dan Rp 15.000 (biaya parkir mobil dan tiket masuk) Pantai Watu Pecak.</p>
+    </section>
+
+    <section id="Syarat dan Ketentuan">
+        <h2>Syarat dan Ketentuan</h2>
+        <p>1. Pengunjung wajib menjaga kebersihan tempat wisata Pantai Watu Pecak.</p>
+        <p>2. Pengunjung wajib mengikuti himbauan dan pentunjuk yang disampaikan oleh pengelola pantai.</p>
+    </section>
+
+    <section id="Fasilitas dan Aksesbilitas">
+        <h2>Fasilitas dan Aksesbilitas</h2>
+        <p>Pantai Watu Pecak dilengkapi dengan berbagai fasilitas yang memadai, seperti area parkir motor dan mobil, toilet umum, dan mushola. Pengelola pantai juga menyediakan beberapa gazebo yang dapat digunakan pengunjung untuk bersantai menikmati pemandangan.</p>
+    </section>
+    <section id="Aktivitas">
+        <h2>Aktivitas Menarik di Pantai Watu Pecak</h2>
+        <p>1. Spot Foto.
+                Menikmati pemandangan Pantai Watu Pecak dapat memanfaatkan berbagai spot foto yang tersedia. Sehingga, dapat memberikan kesan indah dan tak tak terlupakan.
+                Gambar spot Foto</p>
+        <p>2. Berkuda 
+                Berkuda dapat meningkatkan rasa ingin menikmati pemandangan pantai sambil berjalan-jalan menaiki kuda. Tarif menaiki kuda sebesar Rp 10.000/Orang.</p>
+        <p>3. Kuliner 
+                Gambar berbagai makanan minuman (dikasih nama kuliner dan biaya kuliner(opsional))</p>
+        </p>
+    </section>
+
+    </section>
+
+    <form name='submit-to-google-sheet'>
+        <div class="mb-3">
+            <label for="name" class="form-label">Nama Lengkap</label>
+            <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
+        </div>
+        <div class="mb-3">
+            <label for="pesan" class="form-label">pesan</label>
+            <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-kirim">kirim</button>
+        </form>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyMg9vD2PwAyqrtf3FV-B6Zjp21jRnMVB81k-hJqpawW0wEoLpkdBUM-FwA8fPELCKyEw/exec';
+            const form = document.forms['submit-to-google-sheet'];
+            const btnKirim = document.querySelector('.btn-kirim');
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              // ketika tombol submit diklik
+              // tampilkan tombol loading, hilangkan tombol kirim
+              btnKirim.classList.toggle('d-none');
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                  // tampilkan tombol kirim, hilangkan tombol loading
+                  
+              btnKirim.classList.toggle('d-none');
+              
+              //reset
+              form.reset();
+                  console.log('Success!', response)
+                })
+                .catch(error => console.error('Error!', error.message));
+            });
+          </script>
+          <style class="css">
+        /* Styling for alert */
+.alert {
+  padding: 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.alert-success {
+  color: #155724;
+  background-color: #cce5ff;
+  border-color: #004085;
+  background-image: url('https://example.com/wave-pattern.png'); /* Replace with a wave-themed background image */
+  background-size: cover;
+}
+.alert-dismissible .btn-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  background: none;
+  border: none;
+}
+
+/* Styling for form */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #767573;
+  border-radius: 0.375rem;
+  background-color: #eaf8f8;
+  background-image: url('https://example.com/sand-texture.png'); /* Replace with a sand-themed background image */
+  background-size: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #565758;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #5b5b5c;
+  border-radius: 0.375rem;
+  background-color: #f7fbfc;
+  background-image: url('https://example.com/wave-light.png'); /* Replace with a subtle wave background */
+}
+.form-control:focus {
+  border-color: #656565;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(107, 109, 110, 0.5);
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+/* Button styles */
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #6c6c6c;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #6b6b6b;
+}
+
+.btn:disabled {
+  background-color: #5f6162;
+  cursor: not-allowed;
+}
+
+.btn-loading {
+  display: inline-flex;
+  align-items: center;
+}
+
+.spinner-border {
+  margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  form {
+    padding: 1rem;
+  }
+
+  .form-label {
+    font-size: 0.875rem;
+  }
+
+  .form-control {
+    font-size: 0.875rem;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+          </style>
+    </body>
+    </html>
+    
+    <footer class="footer">
+      <div class="footer-left">
+        <h3>Pantai Watu Pecak</h3>
+        <div class="logo">
+          <img src="images/Screenshot_20241228_225808-removebg-preview.png" alt="">
+        </div>
+          <p class="footer-copyright">2024 PantaiWatuPecak</p>
+      </div>
+        
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Indonesia</span> Desa Selok Awar-Awar, Pasirian, Lumajang</p>
+          </div>
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>08832828723872</p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="#">dewitaselokawarawar@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="footer-right">
+          <p class="footer-about">
+          <span>About</span>
+          Pantai Watu Pecak adalah destinasi alam yang terkenal ombak yang indah. Pemandangan pantai yang bernuansa pasir hitam memberikan daya tarik menikmati sunrise, sunset dan berkuda dengan memanfaatkan spot foto yang tersedia serta menikmati kuliner khas Pantai Watu Pecak.
+          </p>
+        </div>
+
+        <div class="footer-media">
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+
+    </footer>
+    
+    
+    
+
+</body>
+</html>
+
