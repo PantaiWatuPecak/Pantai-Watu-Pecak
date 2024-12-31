@@ -96,7 +96,7 @@ section {
 
 /* Mobile Responsive */
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 922px) {
     /* Hamburger Menu on Small Screens */
     .hamburger {
         display: flex;
