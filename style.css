@@ -95,7 +95,8 @@ section {
 
 
 /* Mobile Responsive */
-@media (max-width: 500px) {
+/* Mobile Responsive */
+@media (max-width: 768px) {
     /* Hamburger Menu on Small Screens */
     .hamburger {
         display: flex;
@@ -130,7 +131,7 @@ section {
     }
 }
 .hero {
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
     padding: 30px;
     background:  #332d3089;
