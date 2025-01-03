@@ -18,7 +18,7 @@
             <i class="fas fa-sun"></i> Pantai Watu Pecak <i class="fas fa-water"></i>
         </h1>
         <p>
-            <i class="fas fa-leaf"></i> Selamat datang di Pantai Watu Pecak, Lumajang. Temukan keindahan dan aktivitas menarik di pantai ini.
+            <i class="fas fa-leaf"></i> Selamat datang di Pantai Watu Pecak, Lumajang.
         </p>
     </header>
 
@@ -231,6 +231,50 @@ header p {
     color: rgb(255, 255, 255);
     z-index: 1;
     margin-top: 5px;
+}
+#aktivitas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #fffbea; /* Warna krem seperti pasir pantai */
+}
+
+#aktivitas h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #009688; /* Warna hijau kebiruan */
+    margin-bottom: 30px;
+}
+
+.activity {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border: 3px solid #00acc1; /* Warna biru laut */
+    transition: transform 0.3s ease;
+}
+
+.activity:hover {
+    transform: scale(1.05);
+}
+
+.activity img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border-bottom: 4px solid #ffab40; /* Warna oranye terang */
+}
+
+.activity h3 {
+    font-size: 1rem;
+    color: #ff5722; /* Warna oranye gelap */
+    margin: 15px 0 10px;
 }
 }
 @media (max-height:800px) {
