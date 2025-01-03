@@ -107,7 +107,7 @@ section {
         font-family: 'Times New Roman', Times, serif, sans-serif;
         margin: 0
         padding: 0;
-        font-size: 13px;
+        font-size: 14px;
     }
     /* Hamburger Menu on Small Screens */
     .hamburger {
@@ -162,8 +162,6 @@ header p {
     background:  #332d3089;
     border-radius: 10px;
 }
-
-
 footer {
 background-color: #5f5e5e;
 box-sizing: border-box;
@@ -179,7 +177,6 @@ margin-top: 80px;
 .footer .footer-right {
     display: inline-block;
  vertical-align: top;
-}
 }
 
 @media (max-height:800px) {
@@ -301,19 +298,5 @@ margin-top: 80px;
 
 .footer .footer-media athover {
     background-color: rgb(0, 122, 82);
-}
-
-@media (max-width: 880px){
-    .footer .footer-left,
-    .footer .footer-center,
-    .footer .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: left;
-}
-
-.footer .footer-center i {
-    margin-left: 0px;x
 }
 }
