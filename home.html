@@ -118,6 +118,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 16px;
 }
 
 header {
@@ -221,6 +222,7 @@ header p {
     border-radius: 00px;
     box-shadow: 0 4px 0px rgba(0, 0, 0, 0.2);
 }
+
 footer {
 background-color: #5f5e5e;
 box-sizing: border-box;
@@ -237,7 +239,32 @@ margin-top: 80px;
     display: inline-block;
  vertical-align: top;
 }
-
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        background-color: rgb(224, 205, 153);
+        background-size: cover;
+        background-attachment: fixed;
+        color: rgb(67, 66, 66);
+        font-family: 'Times New Roman', Times, serif, sans-serif;
+        margin: 0
+        padding: 0;
+        font-size: 13px;
+    }
+    header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(225, 255, 0);
+    z-index: 1;
+    margin-top: 0;
+}
+header p {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    margin-top: 5px;
+}
+}
 @media (max-height:800px) {
     footer {
         position: static;
