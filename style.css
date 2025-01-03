@@ -15,6 +15,7 @@ body {
     font-family: 'Times New Roman', Times, serif, sans-serif;
     margin: 0
     padding: 0;
+    font-size: 16px;
 }
 
 header {
@@ -75,6 +76,7 @@ nav ul li a {
     color: rgb(244, 237, 237);
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .hero {
@@ -96,7 +98,17 @@ section {
 
 /* Mobile Responsive */
 /* Mobile Responsive */
-@media (max-width: 922px) {
+@media (max-width: 768px) {
+    body {
+        background-color: rgb(224, 205, 153);
+        background-size: cover;
+        background-attachment: fixed;
+        color: rgb(67, 66, 66);
+        font-family: 'Times New Roman', Times, serif, sans-serif;
+        margin: 0
+        padding: 0;
+        font-size: 13px;
+    }
     /* Hamburger Menu on Small Screens */
     .hamburger {
         display: flex;
@@ -128,7 +140,20 @@ section {
         padding: 10px;
         display: block;
         color: rgb(255, 255, 255);
+        font-size: 1rem;
     }
+    header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(225, 255, 0);
+    z-index: 1;
+    margin-top: 0;
+}
+header p {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    margin-top: 5px;
 }
 .hero {
     max-width: 500px;
@@ -154,6 +179,7 @@ margin-top: 80px;
 .footer .footer-right {
     display: inline-block;
  vertical-align: top;
+}
 }
 
 @media (max-height:800px) {
