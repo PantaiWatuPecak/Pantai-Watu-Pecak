@@ -299,4 +299,17 @@ margin-top: 80px;
 .footer .footer-media athover {
     background-color: rgb(0, 122, 82);
 }
+@media (max-width: 880px){
+    .footer .footer-left,
+    .footer .footer-center,
+    .footer .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.footer .footer-center i {
+    margin-left: 0px;x
+}
 }
