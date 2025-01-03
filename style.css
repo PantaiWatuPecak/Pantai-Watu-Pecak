@@ -93,75 +93,6 @@ section {
     background-color: oldlace;
     border-radius: 45px;
 }
-
-
-
-/* Mobile Responsive */
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    body {
-        background-color: rgb(224, 205, 153);
-        background-size: cover;
-        background-attachment: fixed;
-        color: rgb(67, 66, 66);
-        font-family: 'Times New Roman', Times, serif, sans-serif;
-        margin: 0
-        padding: 0;
-        font-size: 14px;
-    }
-    /* Hamburger Menu on Small Screens */
-    .hamburger {
-        display: flex;
-    }
-
-    /* Hide Navbar Initially */
-    #navbar {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 100%;
-        padding: 10px;
-    }
-
-    /* Show Navbar when 'show' class is active */
-    #navbar.show {
-        display: flex;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li a {
-        padding: 10px;
-        display: block;
-        color: rgb(255, 255, 255);
-        font-size: 1rem;
-    }
-    header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgb(225, 255, 0);
-    z-index: 1;
-    margin-top: 0;
-}
-header p {
-    font-size: 1rem;
-    color: rgb(255, 255, 255);
-    z-index: 1;
-    margin-top: 5px;
-}
-.hero {
-    max-width: 500px;
-    margin: auto;
-    padding: 20px;
-    background:  #332d3089;
-    border-radius: 10px;
-}
 footer {
 background-color: #5f5e5e;
 box-sizing: border-box;
@@ -311,5 +242,71 @@ margin-top: 80px;
 
 .footer .footer-center i {
     margin-left: 0px;x
+}
+/* Mobile Responsive */
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        background-color: rgb(224, 205, 153);
+        background-size: cover;
+        background-attachment: fixed;
+        color: rgb(67, 66, 66);
+        font-family: 'Times New Roman', Times, serif, sans-serif;
+        margin: 0
+        padding: 0;
+        font-size: 14px;
+    }
+    /* Hamburger Menu on Small Screens */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide Navbar Initially */
+    #navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Show Navbar when 'show' class is active */
+    #navbar.show {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
+    }
+    header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(225, 255, 0);
+    z-index: 1;
+    margin-top: 0;
+}
+header p {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    margin-top: 5px;
+}
+.hero {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background:  #332d3089;
+    border-radius: 10px;
 }
 }
