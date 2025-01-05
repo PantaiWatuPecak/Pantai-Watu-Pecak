@@ -90,20 +90,18 @@
             const form = document.forms['submit-to-google-sheet'];
             const btnKirim = document.querySelector('.btn-kirim');
           
-            form.addEventListener('submit', e => {
-              e.preventDefault()
+            form.addEventListener('submit', (e) => {
+              e.preventDefault();
               // ketika tombol submit diklik
               // tampilkan tombol loading, hilangkan tombol kirim
               btnKirim.classList.toggle('d-none');
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
                   // tampilkan tombol kirim, hilangkan tombol loading
-                  
-              btnKirim.classList.toggle('d-none');
-              
-              //reset
-              form.reset();
-                  console.log('Success!', response)
+                  btnKirim.classList.toggle('d-none');
+                //reset
+                    form.reset();
+                  console.log('Success!', response);
                 })
                 .catch(error => console.error('Error!', error.message));
             });
